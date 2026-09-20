@@ -3,34 +3,31 @@ import 'conta-bancaria.dart';
 void main() {
   extrato();
 }
-void extrato(){
-var minhaConta = banco();
-minhaConta.numeroConta = 123456;
-minhaConta.titular = "Pedro Fernandes";
-minhaConta.agencia = "0001";
-minhaConta.metodoDeposito = "DepÃ³sito em dinheiro";
-minhaConta.Saldo = 1000;
 
+void extrato() {
+  var minhaConta = banco();
+  minhaConta.numeroConta = 123456;
+  minhaConta.titular = "Pedro Fernandes";
+  minhaConta.agencia = "0001";
+  minhaConta.metodoDeposito = "Depósito em dinheiro";
+  minhaConta.Saldo = 1000.0;
 
-
-print("__________________________________");
-print("  Iniciando o sistema bancÃ¡rio...");
-print("__________________________________");
-print("      Extrato da conta");
-print("Conta do titular: ${minhaConta.titular}");
-print("NÃºmero da conta: ${minhaConta.numeroConta}");
-print("AgÃªncia: ${minhaConta.agencia}");
-print("MÃ©todo de depÃ³sito: ${minhaConta.metodoDeposito}");
-print("Saldo: ${minhaConta.Saldo}");
-print("__________________________________");
-print("Realizando depÃ³sito de R\$ 500,00 na conta...");
-print("__________________________________");
-print("Conta do titular: ${minhaConta.titular}");
-print("NÃºmero da conta: ${minhaConta.numeroConta}");
-print("AgÃªncia: ${minhaConta.agencia}");
-print("MÃ©todo de depÃ³sito: ${minhaConta.metodoDeposito}");
-print("Saldo: ${minhaConta.Saldo! + 500}");
-
-
-
+  print("__________________________________");
+  print("  Iniciando o sistema bancário...");
+  print("__________________________________");
+  print("      Extrato da conta");
+  print("Conta do titular: ${minhaConta.titular}");
+  print("Número da conta: ${minhaConta.numeroConta}");
+  print("Agência: ${minhaConta.agencia}");
+  print("Método de depósito: ${minhaConta.metodoDeposito}");
+  print("Saldo: ${minhaConta.Saldo.toStringAsFixed(2)}");
+  print("__________________________________");
+  print("Realizando depósito de R\$ 500,00 na conta...");
+  minhaConta.depositar(500.0);
+  print("__________________________________");
+  print("Conta do titular: ${minhaConta.titular}");
+  print("Número da conta: ${minhaConta.numeroConta}");
+  print("Agência: ${minhaConta.agencia}");
+  print("Método de depósito: ${minhaConta.metodoDeposito}");
+  print("Saldo: ${minhaConta.Saldo.toStringAsFixed(2)}");
 }

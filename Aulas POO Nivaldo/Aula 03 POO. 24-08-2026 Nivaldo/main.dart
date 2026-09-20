@@ -1,5 +1,6 @@
-  import './data.dart';
-  main (){
+import './data.dart';
+
+main() {
   var dataNascimento = new Data();
   dataNascimento.dia = 03;
   dataNascimento.mes = 10;
@@ -12,7 +13,7 @@
 
   String d1 = dataNascimento.obterFormatada();
 
-  print("a Data do aniversario é; ${dataNascimento.obterFormatada()}");
+  print("A data do aniversário é: $d1");
 
   Data dataDaVenda = new Data();
   dataDaVenda.dia = 18;
@@ -21,12 +22,10 @@
 
   print("A data da venda foi em ${dataDaVenda.toString()}");
 
-
   //var dataDaVenda  = new Data();
   //dataDaVenda.dia = 18;
   //dataDaVenda.mes = 08;
   //dataDaVenda.ano = 2026;
-
 
   //print ("${dataNascimento.dia} / ${dataNascimento.mes} / ${dataNascimento.ano}");
   //print ("${dataDaCompra.dia} / ${dataDaCompra.mes} / ${dataDaCompra.ano}");
